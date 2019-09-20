@@ -44,12 +44,9 @@ for i in range(0,G1.number_of_nodes()-1):
         flag1 = False
         flag2 = False
         for t in range(0, G1.number_of_edges()):
-            #print('t' + str(t))
-
             flag1 = Skeleton.has_node(edges_with_weight1[t][0])
             flag2 = Skeleton.has_node(edges_with_weight1[t][1])
             if ((flag1 == True and flag2 == False) or (flag1 == False and flag2 == True)):
-                #print(str(t) + ' : ' + str(edges_with_weight1[t]))
 
                 if min_edge_weight > edges_with_weight1[t][2]:
                     min_edge = t
