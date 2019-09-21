@@ -84,6 +84,12 @@ print(edges_with_weight2)
 print(Skeleton.nodes)
 
 Skeleton.add_weighted_edges_from(edges_with_weight2)
+
+sumweight = 0
+for x in range(0,len(edges_with_weight2)):
+    sumweight+=edges_with_weight2[x][2]
+print("Skeleton min weight sum: " + str(sumweight))
+
 layout2 = nx.spring_layout(Skeleton)
 nx.draw(Skeleton, layout2, with_labels=True, node_color='b')
 labels2 = nx.get_edge_attributes(Skeleton, "weight")
